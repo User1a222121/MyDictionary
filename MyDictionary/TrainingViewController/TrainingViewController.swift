@@ -10,6 +10,6 @@ class TrainingViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.title = "Тренировка слов"
-        
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 }

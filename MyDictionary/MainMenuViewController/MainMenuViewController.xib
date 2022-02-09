@@ -16,6 +16,9 @@
                 <outlet property="labelKnowWords" destination="1D4-Hn-4Yl" id="Tct-oY-qMt"/>
                 <outlet property="labelLearnWords" destination="tDN-uv-QcU" id="r0n-gL-zvG"/>
                 <outlet property="labelTrainingWords" destination="2qK-hz-dUm" id="rm4-mZ-B7X"/>
+                <outlet property="learnNewWordsButtonOutlet" destination="1mP-6R-gAb" id="Zvc-Ii-lXY"/>
+                <outlet property="myDictionaryOpenButtonOutlet" destination="e6q-9f-iLo" id="oSU-oB-5mT"/>
+                <outlet property="trainingNewWordsButtonOutlet" destination="e6q-9f-iLo" id="kdE-TM-0Dv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

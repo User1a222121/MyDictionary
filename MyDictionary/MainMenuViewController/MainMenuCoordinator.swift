@@ -14,6 +14,7 @@ class MainMenuCoordinator: Coordinator {
 
     func start() {
         let mainMenuViewController = MainMenuViewController()
+        mainMenuViewController.dataManager = dataManager
         mainMenuViewController.delegate = self
         presenter.pushViewController(mainMenuViewController, animated: true)
 

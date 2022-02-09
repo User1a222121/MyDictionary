@@ -17,14 +17,96 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ah1-Cq-bbk">
+                    <rect key="frame" x="41.5" y="159" width="331" height="224"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YZe-Zl-58g">
+                            <rect key="frame" x="33" y="34" width="265" height="21"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icL-1K-fNk">
+                            <rect key="frame" x="20" y="82" width="118" height="40"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Слово"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="488-8E-6pm">
+                            <rect key="frame" x="20" y="151" width="118" height="40"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Форд"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV9-wn-j1O">
+                            <rect key="frame" x="193" y="151" width="118" height="40"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Мир"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cCC-rB-dYc">
+                            <rect key="frame" x="193" y="82" width="118" height="40"/>
+                            <color key="backgroundColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Буква"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                    <constraints>
+                        <constraint firstItem="PV9-wn-j1O" firstAttribute="top" secondItem="cCC-rB-dYc" secondAttribute="bottom" constant="29" id="6dO-tf-uWo"/>
+                        <constraint firstItem="icL-1K-fNk" firstAttribute="width" secondItem="Ah1-Cq-bbk" secondAttribute="width" multiplier="0.356495" id="BcS-n1-pVd"/>
+                        <constraint firstItem="488-8E-6pm" firstAttribute="leading" secondItem="Ah1-Cq-bbk" secondAttribute="leading" constant="20" id="CKr-fK-qBg"/>
+                        <constraint firstItem="icL-1K-fNk" firstAttribute="height" secondItem="Ah1-Cq-bbk" secondAttribute="height" multiplier="0.178571" id="FQS-yg-Xkw"/>
+                        <constraint firstAttribute="bottom" secondItem="488-8E-6pm" secondAttribute="bottom" constant="33" id="G5j-ML-kut"/>
+                        <constraint firstItem="YZe-Zl-58g" firstAttribute="centerX" secondItem="Ah1-Cq-bbk" secondAttribute="centerX" id="It8-2J-TNn"/>
+                        <constraint firstItem="488-8E-6pm" firstAttribute="width" secondItem="icL-1K-fNk" secondAttribute="width" id="N7i-fi-m2A"/>
+                        <constraint firstItem="cCC-rB-dYc" firstAttribute="height" secondItem="icL-1K-fNk" secondAttribute="height" id="Q4Y-Re-4gp"/>
+                        <constraint firstItem="488-8E-6pm" firstAttribute="top" secondItem="icL-1K-fNk" secondAttribute="bottom" constant="29" id="QE4-9N-ej8"/>
+                        <constraint firstItem="cCC-rB-dYc" firstAttribute="trailing" secondItem="PV9-wn-j1O" secondAttribute="trailing" id="VDO-2Q-hMi"/>
+                        <constraint firstAttribute="trailing" secondItem="PV9-wn-j1O" secondAttribute="trailing" constant="20" id="XUx-cz-YTA"/>
+                        <constraint firstItem="icL-1K-fNk" firstAttribute="leading" secondItem="488-8E-6pm" secondAttribute="leading" id="dDX-eI-fPs"/>
+                        <constraint firstItem="YZe-Zl-58g" firstAttribute="top" secondItem="Ah1-Cq-bbk" secondAttribute="top" constant="34" id="fOQ-kr-Cic"/>
+                        <constraint firstItem="PV9-wn-j1O" firstAttribute="width" secondItem="icL-1K-fNk" secondAttribute="width" id="gMo-J5-wUE"/>
+                        <constraint firstAttribute="bottom" secondItem="PV9-wn-j1O" secondAttribute="bottom" constant="33" id="jFz-99-baN"/>
+                        <constraint firstItem="YZe-Zl-58g" firstAttribute="width" secondItem="Ah1-Cq-bbk" secondAttribute="width" multiplier="0.8" id="l1j-oi-LVT"/>
+                        <constraint firstItem="cCC-rB-dYc" firstAttribute="width" secondItem="icL-1K-fNk" secondAttribute="width" id="l52-Ua-jcE"/>
+                        <constraint firstItem="488-8E-6pm" firstAttribute="height" secondItem="icL-1K-fNk" secondAttribute="height" id="oei-bi-etL"/>
+                        <constraint firstItem="PV9-wn-j1O" firstAttribute="height" secondItem="icL-1K-fNk" secondAttribute="height" id="ohM-LD-QqQ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите правильный вариант слова" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3D1-Wd-Lf9">
+                    <rect key="frame" x="56.5" y="84" width="301" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="duu-ks-OrT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-            <point key="canvasLocation" x="132" y="125"/>
+            <constraints>
+                <constraint firstItem="3D1-Wd-Lf9" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="40" id="MP1-gd-Rtg"/>
+                <constraint firstItem="Ah1-Cq-bbk" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Txd-Al-2SX"/>
+                <constraint firstItem="Ah1-Cq-bbk" firstAttribute="top" secondItem="3D1-Wd-Lf9" secondAttribute="bottom" constant="50" id="e3h-hV-isZ"/>
+                <constraint firstItem="Ah1-Cq-bbk" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="eF3-5H-vCI"/>
+                <constraint firstItem="3D1-Wd-Lf9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="qjc-11-fHu"/>
+                <constraint firstItem="Ah1-Cq-bbk" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.25" id="xdf-kl-Qcw"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="124.55357142857142"/>
         </view>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

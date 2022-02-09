@@ -6,6 +6,7 @@ class DetailInfoViewController: UIViewController {
         super.viewDidLoad()
 
         navigationItem.title = "Детальная статистика"
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 
 

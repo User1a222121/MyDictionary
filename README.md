@@ -1,4 +1,4 @@
-<img src="https://github.com/User1a222121/MyDictionary/blob/main/MyDictionary.png" width="380" height="750">
+<img src="https://github.com/User1a222121/MyDictionary/blob/main/MyDictionary.gif" width="380" height="750">
 
 # MyDictionary
 

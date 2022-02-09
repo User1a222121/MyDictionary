@@ -22,7 +22,7 @@
 		1A24266027B27C1D00C51282 /* MainMenuViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24265F27B27C1D00C51282 /* MainMenuViewControllerOutput.swift */; };
 		1A24266227B28A9100C51282 /* TrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266127B28A9100C51282 /* TrainingCoordinator.swift */; };
 		1A24266427B28AA800C51282 /* DictionaryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266327B28AA800C51282 /* DictionaryCoordinator.swift */; };
-		1A24266627B28E5900C51282 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266527B28E5900C51282 /* OnboardingCoordinator.swift */; };
+		1A24266627B28E5900C51282 /* StartCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266527B28E5900C51282 /* StartCoordinator.swift */; };
 		1A24266927B29FBB00C51282 /* DetailInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266727B29FBB00C51282 /* DetailInfoViewController.swift */; };
 		1A24266A27B29FBB00C51282 /* DetailInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A24266827B29FBB00C51282 /* DetailInfoViewController.xib */; };
 		1A24266D27B2A96300C51282 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A24266C27B2A96300C51282 /* User+CoreDataClass.swift */; };
@@ -44,6 +44,10 @@
 		1A871E9327B25A15006B0D82 /* Word+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E8D27B25A15006B0D82 /* Word+CoreDataProperties.swift */; };
 		1A871E9427B25A15006B0D82 /* Word+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E8E27B25A15006B0D82 /* Word+CoreDataClass.swift */; };
 		1A871E9527B25A15006B0D82 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E8F27B25A15006B0D82 /* User+CoreDataProperties.swift */; };
+		1A88A3FE27B3D6C000D364BA /* DictionaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88A3FC27B3D6C000D364BA /* DictionaryCell.swift */; };
+		1A88A3FF27B3D6C000D364BA /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A88A3FD27B3D6C000D364BA /* DictionaryCell.xib */; };
+		1A88A40327B3F83D00D364BA /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88A40127B3F83D00D364BA /* CollectionCell.swift */; };
+		1A88A40427B3F83D00D364BA /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A88A40227B3F83D00D364BA /* CollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +66,7 @@
 		1A24265F27B27C1D00C51282 /* MainMenuViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewControllerOutput.swift; sourceTree = "<group>"; };
 		1A24266127B28A9100C51282 /* TrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCoordinator.swift; sourceTree = "<group>"; };
 		1A24266327B28AA800C51282 /* DictionaryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCoordinator.swift; sourceTree = "<group>"; };
-		1A24266527B28E5900C51282 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		1A24266527B28E5900C51282 /* StartCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartCoordinator.swift; sourceTree = "<group>"; };
 		1A24266727B29FBB00C51282 /* DetailInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInfoViewController.swift; sourceTree = "<group>"; };
 		1A24266827B29FBB00C51282 /* DetailInfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailInfoViewController.xib; sourceTree = "<group>"; };
 		1A24266C27B2A96300C51282 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -86,6 +90,10 @@
 		1A871E8D27B25A15006B0D82 /* Word+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Word+CoreDataProperties.swift"; path = "MyDictionary/DataManager/CoreData files/Word+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		1A871E8E27B25A15006B0D82 /* Word+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Word+CoreDataClass.swift"; path = "MyDictionary/DataManager/CoreData files/Word+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		1A871E8F27B25A15006B0D82 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "User+CoreDataProperties.swift"; path = "MyDictionary/DataManager/CoreData files/User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		1A88A3FC27B3D6C000D364BA /* DictionaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCell.swift; sourceTree = "<group>"; };
+		1A88A3FD27B3D6C000D364BA /* DictionaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
+		1A88A40127B3F83D00D364BA /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
+		1A88A40227B3F83D00D364BA /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +134,7 @@
 				1A24266327B28AA800C51282 /* DictionaryCoordinator.swift */,
 				1A24264827B26A3000C51282 /* DictionaryViewController.swift */,
 				1A24264A27B26A4000C51282 /* DictionaryViewController.xib */,
+				1A88A3FB27B3D68B00D364BA /* DictionaryCell */,
 			);
 			path = MyDictionaryViewController;
 			sourceTree = "<group>";
@@ -135,6 +144,7 @@
 			children = (
 				1A24264C27B26A6400C51282 /* CollectionViewController.swift */,
 				1A24264E27B26A7100C51282 /* CollectionViewController.xib */,
+				1A88A40027B3F80900D364BA /* CollectionCell */,
 			);
 			path = CollectionViewController;
 			sourceTree = "<group>";
@@ -214,7 +224,7 @@
 		1A871E8527B256BF006B0D82 /* MainMenuViewController */ = {
 			isa = PBXGroup;
 			children = (
-				1A24266527B28E5900C51282 /* OnboardingCoordinator.swift */,
+				1A24266527B28E5900C51282 /* StartCoordinator.swift */,
 				1A871E7F27B255E9006B0D82 /* MainMenuCoordinator.swift */,
 				1A24265F27B27C1D00C51282 /* MainMenuViewControllerOutput.swift */,
 				1A871E8127B25600006B0D82 /* MainMenuViewController.swift */,
@@ -237,8 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				1A871E7927B2559F006B0D82 /* RegistrationViewController.swift */,
-				1A871E7B27B255B4006B0D82 /* RegistrationViewController.xib */,
 				1A871E7D27B255CE006B0D82 /* RegistrationViewControllerOutput.swift */,
+				1A871E7B27B255B4006B0D82 /* RegistrationViewController.xib */,
 			);
 			path = RegistrationViewController;
 			sourceTree = "<group>";
@@ -254,6 +264,24 @@
 				1A871E8D27B25A15006B0D82 /* Word+CoreDataProperties.swift */,
 			);
 			path = "CoreData files";
+			sourceTree = "<group>";
+		};
+		1A88A3FB27B3D68B00D364BA /* DictionaryCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A88A3FC27B3D6C000D364BA /* DictionaryCell.swift */,
+				1A88A3FD27B3D6C000D364BA /* DictionaryCell.xib */,
+			);
+			name = DictionaryCell;
+			sourceTree = "<group>";
+		};
+		1A88A40027B3F80900D364BA /* CollectionCell */ = {
+			isa = PBXGroup;
+			children = (
+				1A88A40127B3F83D00D364BA /* CollectionCell.swift */,
+				1A88A40227B3F83D00D364BA /* CollectionCell.xib */,
+			);
+			name = CollectionCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -314,7 +342,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A88A3FF27B3D6C000D364BA /* DictionaryCell.xib in Resources */,
 				1A24264F27B26A7100C51282 /* CollectionViewController.xib in Resources */,
+				1A88A40427B3F83D00D364BA /* CollectionCell.xib in Resources */,
 				1A871E6927B253FF006B0D82 /* Assets.xcassets in Resources */,
 				1A871E8427B25615006B0D82 /* MainMenuViewController.xib in Resources */,
 				1A24264727B26A1E00C51282 /* TrainingViewController.xib in Resources */,
@@ -343,6 +373,7 @@
 				1A871E9327B25A15006B0D82 /* Word+CoreDataProperties.swift in Sources */,
 				1A871E6727B253FF006B0D82 /* MyDictionary.xcdatamodeld in Sources */,
 				1A871E5D27B253FF006B0D82 /* AppDelegate.swift in Sources */,
+				1A88A3FE27B3D6C000D364BA /* DictionaryCell.swift in Sources */,
 				1A24266927B29FBB00C51282 /* DetailInfoViewController.swift in Sources */,
 				1A871E7E27B255CE006B0D82 /* RegistrationViewControllerOutput.swift in Sources */,
 				1A871E7427B25536006B0D82 /* CustomColors.swift in Sources */,
@@ -350,7 +381,8 @@
 				1A871E8227B25600006B0D82 /* MainMenuViewController.swift in Sources */,
 				1A871E7A27B2559F006B0D82 /* RegistrationViewController.swift in Sources */,
 				1A24264D27B26A6400C51282 /* CollectionViewController.swift in Sources */,
-				1A24266627B28E5900C51282 /* OnboardingCoordinator.swift in Sources */,
+				1A24266627B28E5900C51282 /* StartCoordinator.swift in Sources */,
+				1A88A40327B3F83D00D364BA /* CollectionCell.swift in Sources */,
 				1A24264927B26A3000C51282 /* DictionaryViewController.swift in Sources */,
 				1A24266427B28AA800C51282 /* DictionaryCoordinator.swift in Sources */,
 				1A24264527B26A1200C51282 /* TrainingViewController.swift in Sources */,

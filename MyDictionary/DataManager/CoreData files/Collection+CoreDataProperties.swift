@@ -29,15 +29,16 @@ extension Collection {
         imageCollection ?? ""
     }
     
-    public var itemArray: [Word] {
+    public var wordArray: [Word] {
         let set = word as? Set<Word> ?? []
         return set.sorted { $0.wrappedEngWord < $1.wrappedEngWord }
 
     }
     
-    convenience init(nameCollection: String, imageCollection: String, context: NSManagedObjectContext) {
+    convenience init(nameCollection: String, imageCollection: String, word: NSSet, context: NSManagedObjectContext) {
         self.init(context: context)
         self.nameCollection = nameCollection
+        self.word = word
     }
 
 }

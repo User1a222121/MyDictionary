@@ -11,6 +11,7 @@ extension User {
     @NSManaged public var city: String?
     @NSManaged public var language: String?
     @NSManaged public var name: String?
+    @NSManaged public var isMain: Bool
     @NSManaged public var collection: NSSet?
     
     public var wrappedName: String {
@@ -25,16 +26,18 @@ extension User {
         city ?? ""
     }
     
+    
     public var collectionArray: [Collection] {
         let set = collection as? Set<Collection> ?? []
         return set.sorted { $0.wrappedNameCollection < $1.wrappedNameCollection}
     }
     
-    convenience init(name: String, language: String, city: String, context: NSManagedObjectContext) {
+    convenience init(name: String, language: String, city: String, isMain: Bool, collection: NSSet, context: NSManagedObjectContext) {
         self.init(context: context)
         self.name = name
         self.language = language
         self.city = city
+        self.collection = collection
     }
 
 }

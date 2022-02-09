@@ -1,14 +1,6 @@
 import CoreData
 
-
-protocol DataProtocolSave {
-
-    func createNewUser(name: String, language: String, city: String)
-
-
-}
-
-class DataManager: DataProtocolSave {
+class DataManager {
 
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
@@ -20,6 +12,8 @@ class DataManager: DataProtocolSave {
         })
         return container
     }()
+    
+    lazy var viewContext : NSManagedObjectContext = persistentContainer.viewContext
 
     // MARK: - Core Data Saving support
     func saveContext () {
@@ -44,16 +38,15 @@ class DataManager: DataProtocolSave {
 
     // MARK: - Core Data create support
     
-    func createNewUser(name: String, language: String, city: String) {
+    func createNewUser(name: String, language: String, city: String, isMain: Bool) {
 
         let viewContext = persistentContainer.viewContext
-
-//        _ = User(name: name, language: language, city: city, context: viewContext)
+        let _ = User(name: name, language: language, city: city, isMain: isMain, collection: [startCollection()], context: viewContext)
 
         do {
             try viewContext.save()
         } catch let error as NSError {
-            print("Error save obtainMainCommand \(error.localizedDescription)")
+            print("Error save User \(error.localizedDescription)")
         }
     }
     
@@ -66,4 +59,35 @@ class DataManager: DataProtocolSave {
     }
 }
 
+// extension StartCollection
+extension DataManager {
+    
+    func startCollection() -> Collection {
+
+        let startCollection = Collection(nameCollection: "100 самых популярных слов", imageCollection: "noimage", word: [
+        Word(rusWord: "слово", engWord: "word", context: viewContext),
+        Word(rusWord: "иметь", engWord: "have", context: viewContext),
+        Word(rusWord: "или", engWord: "or", context: viewContext),
+        Word(rusWord: "но", engWord: "but", context: viewContext),
+        Word(rusWord: "как", engWord: "as", context: viewContext),
+        Word(rusWord: "с", engWord: "with", context: viewContext),
+        Word(rusWord: "на", engWord: "on", context: viewContext),
+        Word(rusWord: "для", engWord: "for", context: viewContext),
+        Word(rusWord: "в", engWord: "in", context: viewContext),
+        Word(rusWord: "к", engWord: "to", context: viewContext),
+        Word(rusWord: "общественный", engWord: "public", context: viewContext),
+        Word(rusWord: "немного", engWord: "few", context: viewContext),
+        Word(rusWord: "молодой", engWord: "young", context: viewContext),
+        Word(rusWord: "следующий", engWord: "next", context: viewContext),
+        Word(rusWord: "большой", engWord: "large", context: viewContext),
+        Word(rusWord: "небольшой", engWord: "small", context: viewContext),
+        Word(rusWord: "другой", engWord: "other", context: viewContext),
+        Word(rusWord: "немного", engWord: "little", context: viewContext),
+        Word(rusWord: "долгий", engWord: "long", context: viewContext),
+        Word(rusWord: "последний", engWord: "last", context: viewContext)
+        ], context: viewContext)
+
+        return startCollection
+    }
+}
 

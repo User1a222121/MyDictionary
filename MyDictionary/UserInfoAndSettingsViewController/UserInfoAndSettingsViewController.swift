@@ -9,7 +9,7 @@ class UserInfoAndSettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Настройки" 
-        
+        navigationController?.navigationBar.prefersLargeTitles = false
     }
 
     

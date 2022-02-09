@@ -4,7 +4,7 @@ class RegistrationViewController: UIViewController {
     
     // MARK: - propirties
     var output: RegistrationViewControllerOutput?
-//    var dataProtocol: DataProtocolSave?
+    var dataManager = DataManager()
     
     // MARK: - outlets
     @IBOutlet private weak var nameTF: CustomTextField!
@@ -29,7 +29,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @objc func saveTapped() {
-//        dataProtocol?.createNewUser(name: nameTF.text ?? "Имя не указано", language: languageTF.text ?? "Родной язык не указан", city: cityTF.text  ?? "Город не указан")
+        dataManager.createNewUser(name: nameTF.text ?? "Имя не указано", language: languageTF.text ?? "Родной язык не указан", city: cityTF.text  ?? "Город не указан", isMain: true)
         output?.didFinish(self)
     }
 }

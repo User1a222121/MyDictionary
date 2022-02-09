@@ -5,12 +5,12 @@ protocol Coordinator: AnyObject {
     func start()
 }
 
-class OnboardingCoordinator: Coordinator {
+class StartCoordinator: Coordinator {
     
     // MARK: - propirti
     let dataManager: DataManager
     let window: UIWindow
-    let trainingCoordinator: MainMenuCoordinator
+    let mainMenuCoordinator: MainMenuCoordinator
     let rootViewController: UINavigationController
     
     init(window: UIWindow) {
@@ -19,7 +19,7 @@ class OnboardingCoordinator: Coordinator {
         self.rootViewController = UINavigationController()
         rootViewController.navigationBar.prefersLargeTitles = true
         
-        trainingCoordinator = MainMenuCoordinator(presenter: rootViewController, dataManager: dataManager)
+        mainMenuCoordinator = MainMenuCoordinator(presenter: rootViewController, dataManager: dataManager)
     }
     
     func startRegistrationIfNeeded() {
@@ -27,6 +27,7 @@ class OnboardingCoordinator: Coordinator {
         let onboardingInstructor = OnboardingInstructor()
         guard onboardingInstructor.needsToShowOnboarding else { return }
         let vc = RegistrationViewController()
+        vc.dataManager = dataManager
         vc.output = self
         rootViewController.pushViewController(vc, animated: true)
         
@@ -35,7 +36,7 @@ class OnboardingCoordinator: Coordinator {
     func start() {
 
         window.rootViewController = rootViewController
-        trainingCoordinator.start()
+        mainMenuCoordinator.start()
         window.makeKeyAndVisible()
         
         startRegistrationIfNeeded()
@@ -61,7 +62,7 @@ struct OnboardingInstructor {
 }
 
 // MARK: - extension RegistrationViewControllerOutput
-extension OnboardingCoordinator: RegistrationViewControllerOutput {
+extension StartCoordinator: RegistrationViewControllerOutput {
     func didFinish(_ vc: RegistrationViewController) {
         let onboardingInstructor = OnboardingInstructor()
         onboardingInstructor.onboardingIsFinished()
