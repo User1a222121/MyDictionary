@@ -26,6 +26,11 @@
             </collectionViewFlowLayout>
             <point key="canvasLocation" x="-178" y="118"/>
         </collectionView>
+        <customObject id="4Po-0w-BAb" customClass="CollectionAssembly" customModule="MyDictionary" customModuleProvider="target">
+            <connections>
+                <outlet property="viewController" destination="-1" id="btK-pC-F4k"/>
+            </connections>
+        </customObject>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">

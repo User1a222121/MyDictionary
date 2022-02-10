@@ -4,12 +4,10 @@ class TrainingCoordinator: Coordinator {
   private let presenter: UINavigationController
   private var mainMenuViewController: MainMenuViewController?
   private var trainingViewController: TrainingViewController?
-  private let dataManager: DataManager
 
-  init(presenter: UINavigationController, dataManager: DataManager) {
+  init(presenter: UINavigationController) {
 
     self.presenter = presenter
-    self.dataManager = dataManager
   }
 
   func start() {

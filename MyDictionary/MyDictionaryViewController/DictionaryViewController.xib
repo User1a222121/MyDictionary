@@ -34,6 +34,11 @@
             </constraints>
             <point key="canvasLocation" x="-104" y="7"/>
         </view>
+        <customObject id="Lvt-De-LlA" customClass="DictionaryAssembly" customModule="MyDictionary" customModuleProvider="target">
+            <connections>
+                <outlet property="viewController" destination="-1" id="V0B-FW-d6T"/>
+            </connections>
+        </customObject>
     </objects>
     <resources>
         <systemColor name="systemBackgroundColor">

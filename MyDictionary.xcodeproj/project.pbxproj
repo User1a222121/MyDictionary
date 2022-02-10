@@ -35,7 +35,6 @@
 		1A871E7827B25579006B0D82 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E7727B25579006B0D82 /* DataManager.swift */; };
 		1A871E7A27B2559F006B0D82 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E7927B2559F006B0D82 /* RegistrationViewController.swift */; };
 		1A871E7C27B255B4006B0D82 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A871E7B27B255B4006B0D82 /* RegistrationViewController.xib */; };
-		1A871E7E27B255CE006B0D82 /* RegistrationViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E7D27B255CE006B0D82 /* RegistrationViewControllerOutput.swift */; };
 		1A871E8027B255E9006B0D82 /* MainMenuCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E7F27B255E9006B0D82 /* MainMenuCoordinator.swift */; };
 		1A871E8227B25600006B0D82 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A871E8127B25600006B0D82 /* MainMenuViewController.swift */; };
 		1A871E8427B25615006B0D82 /* MainMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A871E8327B25615006B0D82 /* MainMenuViewController.xib */; };
@@ -48,6 +47,19 @@
 		1A88A3FF27B3D6C000D364BA /* DictionaryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A88A3FD27B3D6C000D364BA /* DictionaryCell.xib */; };
 		1A88A40327B3F83D00D364BA /* CollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A88A40127B3F83D00D364BA /* CollectionCell.swift */; };
 		1A88A40427B3F83D00D364BA /* CollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A88A40227B3F83D00D364BA /* CollectionCell.xib */; };
+		1ACEB61727B505FD009E21C1 /* CollectionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB61627B505FD009E21C1 /* CollectionPresenter.swift */; };
+		1ACEB61927B50625009E21C1 /* DictionaryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB61827B50625009E21C1 /* DictionaryPresenter.swift */; };
+		1ACEB61B27B506C9009E21C1 /* DictionaryViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB61A27B506C9009E21C1 /* DictionaryViewInput.swift */; };
+		1ACEB61D27B506DD009E21C1 /* DictionaryViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB61C27B506DD009E21C1 /* DictionaryViewOutput.swift */; };
+		1ACEB61F27B51534009E21C1 /* DictionaryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB61E27B51534009E21C1 /* DictionaryAssembly.swift */; };
+		1ACEB62127B523D9009E21C1 /* CollectionViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62027B523D9009E21C1 /* CollectionViewInput.swift */; };
+		1ACEB62327B52589009E21C1 /* CollectionViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62227B52589009E21C1 /* CollectionViewOutput.swift */; };
+		1ACEB62527B525C9009E21C1 /* CollectionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62427B525C9009E21C1 /* CollectionAssembly.swift */; };
+		1ACEB62727B52F6F009E21C1 /* RegistrationPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62627B52F6F009E21C1 /* RegistrationPresent.swift */; };
+		1ACEB62927B52F82009E21C1 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62827B52F82009E21C1 /* RegistrationAssembly.swift */; };
+		1ACEB62B27B52F92009E21C1 /* RegistrationViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62A27B52F92009E21C1 /* RegistrationViewInput.swift */; };
+		1ACEB62D27B52F9D009E21C1 /* RegistrationViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62C27B52F9D009E21C1 /* RegistrationViewOutput.swift */; };
+		1ACEB62F27B538C3009E21C1 /* OnboardingInstructor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACEB62E27B538C3009E21C1 /* OnboardingInstructor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +93,6 @@
 		1A871E7727B25579006B0D82 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1A871E7927B2559F006B0D82 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		1A871E7B27B255B4006B0D82 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
-		1A871E7D27B255CE006B0D82 /* RegistrationViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewControllerOutput.swift; sourceTree = "<group>"; };
 		1A871E7F27B255E9006B0D82 /* MainMenuCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuCoordinator.swift; sourceTree = "<group>"; };
 		1A871E8127B25600006B0D82 /* MainMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		1A871E8327B25615006B0D82 /* MainMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenuViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +105,19 @@
 		1A88A3FD27B3D6C000D364BA /* DictionaryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DictionaryCell.xib; sourceTree = "<group>"; };
 		1A88A40127B3F83D00D364BA /* CollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionCell.swift; sourceTree = "<group>"; };
 		1A88A40227B3F83D00D364BA /* CollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionCell.xib; sourceTree = "<group>"; };
+		1ACEB61627B505FD009E21C1 /* CollectionPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPresenter.swift; sourceTree = "<group>"; };
+		1ACEB61827B50625009E21C1 /* DictionaryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryPresenter.swift; sourceTree = "<group>"; };
+		1ACEB61A27B506C9009E21C1 /* DictionaryViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewInput.swift; sourceTree = "<group>"; };
+		1ACEB61C27B506DD009E21C1 /* DictionaryViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewOutput.swift; sourceTree = "<group>"; };
+		1ACEB61E27B51534009E21C1 /* DictionaryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryAssembly.swift; sourceTree = "<group>"; };
+		1ACEB62027B523D9009E21C1 /* CollectionViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewInput.swift; sourceTree = "<group>"; };
+		1ACEB62227B52589009E21C1 /* CollectionViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewOutput.swift; sourceTree = "<group>"; };
+		1ACEB62427B525C9009E21C1 /* CollectionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionAssembly.swift; sourceTree = "<group>"; };
+		1ACEB62627B52F6F009E21C1 /* RegistrationPresent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationPresent.swift; sourceTree = "<group>"; };
+		1ACEB62827B52F82009E21C1 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		1ACEB62A27B52F92009E21C1 /* RegistrationViewInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewInput.swift; sourceTree = "<group>"; };
+		1ACEB62C27B52F9D009E21C1 /* RegistrationViewOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewOutput.swift; sourceTree = "<group>"; };
+		1ACEB62E27B538C3009E21C1 /* OnboardingInstructor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingInstructor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +155,10 @@
 		1A24264227B269C500C51282 /* MyDictionaryViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1ACEB61827B50625009E21C1 /* DictionaryPresenter.swift */,
+				1ACEB61E27B51534009E21C1 /* DictionaryAssembly.swift */,
+				1ACEB61A27B506C9009E21C1 /* DictionaryViewInput.swift */,
+				1ACEB61C27B506DD009E21C1 /* DictionaryViewOutput.swift */,
 				1A24266327B28AA800C51282 /* DictionaryCoordinator.swift */,
 				1A24264827B26A3000C51282 /* DictionaryViewController.swift */,
 				1A24264A27B26A4000C51282 /* DictionaryViewController.xib */,
@@ -142,6 +170,10 @@
 		1A24264327B269E100C51282 /* CollectionViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1ACEB61627B505FD009E21C1 /* CollectionPresenter.swift */,
+				1ACEB62427B525C9009E21C1 /* CollectionAssembly.swift */,
+				1ACEB62027B523D9009E21C1 /* CollectionViewInput.swift */,
+				1ACEB62227B52589009E21C1 /* CollectionViewOutput.swift */,
 				1A24264C27B26A6400C51282 /* CollectionViewController.swift */,
 				1A24264E27B26A7100C51282 /* CollectionViewController.xib */,
 				1A88A40027B3F80900D364BA /* CollectionCell */,
@@ -246,8 +278,12 @@
 		1A871E8827B256E8006B0D82 /* RegistrationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				1ACEB62E27B538C3009E21C1 /* OnboardingInstructor.swift */,
+				1ACEB62627B52F6F009E21C1 /* RegistrationPresent.swift */,
+				1ACEB62827B52F82009E21C1 /* RegistrationAssembly.swift */,
+				1ACEB62A27B52F92009E21C1 /* RegistrationViewInput.swift */,
+				1ACEB62C27B52F9D009E21C1 /* RegistrationViewOutput.swift */,
 				1A871E7927B2559F006B0D82 /* RegistrationViewController.swift */,
-				1A871E7D27B255CE006B0D82 /* RegistrationViewControllerOutput.swift */,
 				1A871E7B27B255B4006B0D82 /* RegistrationViewController.xib */,
 			);
 			path = RegistrationViewController;
@@ -374,24 +410,36 @@
 				1A871E6727B253FF006B0D82 /* MyDictionary.xcdatamodeld in Sources */,
 				1A871E5D27B253FF006B0D82 /* AppDelegate.swift in Sources */,
 				1A88A3FE27B3D6C000D364BA /* DictionaryCell.swift in Sources */,
+				1ACEB62F27B538C3009E21C1 /* OnboardingInstructor.swift in Sources */,
 				1A24266927B29FBB00C51282 /* DetailInfoViewController.swift in Sources */,
-				1A871E7E27B255CE006B0D82 /* RegistrationViewControllerOutput.swift in Sources */,
 				1A871E7427B25536006B0D82 /* CustomColors.swift in Sources */,
+				1ACEB62327B52589009E21C1 /* CollectionViewOutput.swift in Sources */,
+				1ACEB61D27B506DD009E21C1 /* DictionaryViewOutput.swift in Sources */,
 				1A24265727B2798F00C51282 /* UserInfoAndSettingsViewController.swift in Sources */,
 				1A871E8227B25600006B0D82 /* MainMenuViewController.swift in Sources */,
 				1A871E7A27B2559F006B0D82 /* RegistrationViewController.swift in Sources */,
+				1ACEB61F27B51534009E21C1 /* DictionaryAssembly.swift in Sources */,
 				1A24264D27B26A6400C51282 /* CollectionViewController.swift in Sources */,
+				1ACEB62B27B52F92009E21C1 /* RegistrationViewInput.swift in Sources */,
 				1A24266627B28E5900C51282 /* StartCoordinator.swift in Sources */,
+				1ACEB62127B523D9009E21C1 /* CollectionViewInput.swift in Sources */,
+				1ACEB61927B50625009E21C1 /* DictionaryPresenter.swift in Sources */,
 				1A88A40327B3F83D00D364BA /* CollectionCell.swift in Sources */,
 				1A24264927B26A3000C51282 /* DictionaryViewController.swift in Sources */,
+				1ACEB61B27B506C9009E21C1 /* DictionaryViewInput.swift in Sources */,
 				1A24266427B28AA800C51282 /* DictionaryCoordinator.swift in Sources */,
 				1A24264527B26A1200C51282 /* TrainingViewController.swift in Sources */,
 				1A871E9127B25A15006B0D82 /* Collection+CoreDataProperties.swift in Sources */,
+				1ACEB62D27B52F9D009E21C1 /* RegistrationViewOutput.swift in Sources */,
 				1A24265C27B27AC000C51282 /* LearnNewWordsViewController.swift in Sources */,
 				1A871E8027B255E9006B0D82 /* MainMenuCoordinator.swift in Sources */,
 				1A24266227B28A9100C51282 /* TrainingCoordinator.swift in Sources */,
+				1ACEB62727B52F6F009E21C1 /* RegistrationPresent.swift in Sources */,
+				1ACEB61727B505FD009E21C1 /* CollectionPresenter.swift in Sources */,
 				1A871E5F27B253FF006B0D82 /* SceneDelegate.swift in Sources */,
+				1ACEB62927B52F82009E21C1 /* RegistrationAssembly.swift in Sources */,
 				1A871E9427B25A15006B0D82 /* Word+CoreDataClass.swift in Sources */,
+				1ACEB62527B525C9009E21C1 /* CollectionAssembly.swift in Sources */,
 				1A24266027B27C1D00C51282 /* MainMenuViewControllerOutput.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

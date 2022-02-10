@@ -5,8 +5,6 @@ class MainMenuViewController: UIViewController {
     
     // MARK: - Propirties
     weak var delegate: MainViewControllerOutput?
-    var dataManager = DataManager()
-    
     
     // MARK: - Outlets
     @IBOutlet private weak var POLearnNewWords: UIProgressView!

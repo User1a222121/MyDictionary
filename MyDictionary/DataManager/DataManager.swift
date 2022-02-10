@@ -1,6 +1,13 @@
 import CoreData
 
-class DataManager {
+protocol DataManagerProtocol {
+    
+    func obtainMainUserData() -> User
+    
+    
+}
+
+class DataManager: DataManagerProtocol {
 
     // MARK: - Core Data stack
     lazy var persistentContainer: NSPersistentContainer = {
@@ -38,6 +45,14 @@ class DataManager {
 
     // MARK: - Core Data create support
     
+    func createNewCollection() {
+        
+    }
+    
+    func createNewWord() {
+        
+    }
+    
     func createNewUser(name: String, language: String, city: String, isMain: Bool) {
 
         let viewContext = persistentContainer.viewContext
@@ -50,16 +65,25 @@ class DataManager {
         }
     }
     
-    func createNewCollection() {
+    // MARK: - Core Data obtain support
+    func obtainMainUserData() -> User {
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "isMain == true")
         
-    }
-    
-    func createNewWord() {
-        
+        do {
+            let data = try viewContext.fetch(fetchRequest)
+            if let mainUser = data.first {
+                return mainUser
+            }
+                
+        } catch let error as NSError {
+            print("Error obtainDataCollection \(error.localizedDescription)")
+        }
+        return User()
     }
 }
 
-// extension StartCollection
+// MARK: - extension StartCollection
 extension DataManager {
     
     func startCollection() -> Collection {

@@ -5,16 +5,13 @@ class MainMenuCoordinator: Coordinator {
     private var mainMenuViewController: MainMenuViewController?
     private var trainingCoordinator: TrainingCoordinator?
     private var dictionaryCoordinator: DictionaryCoordinator?
-    private let dataManager: DataManager
     
-    init(presenter: UINavigationController, dataManager: DataManager) {
+    init(presenter: UINavigationController) {
         self.presenter = presenter
-        self.dataManager = dataManager
     }
 
     func start() {
         let mainMenuViewController = MainMenuViewController()
-        mainMenuViewController.dataManager = dataManager
         mainMenuViewController.delegate = self
         presenter.pushViewController(mainMenuViewController, animated: true)
 
@@ -32,14 +29,14 @@ extension MainMenuCoordinator: MainViewControllerOutput {
     
     func openTrainingOfWords() {
         
-        let trainingCoordinator = TrainingCoordinator(presenter: presenter, dataManager: dataManager)
+        let trainingCoordinator = TrainingCoordinator(presenter: presenter)
         trainingCoordinator.start()
         self.trainingCoordinator = trainingCoordinator
     }
     
     func openMyDictionary() {
         
-        let dictionaryCoordinator = DictionaryCoordinator(presenter: presenter, dataManager: dataManager)
+        let dictionaryCoordinator = DictionaryCoordinator(presenter: presenter)
         dictionaryCoordinator.start()
         self.dictionaryCoordinator = dictionaryCoordinator
     }

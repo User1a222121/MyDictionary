@@ -4,7 +4,7 @@ import CoreData
 class CollectionViewController: UIViewController {
     
     // MARK: - Propirties
-    var dataManager = DataManager()
+    var output: CollectionViewOutput!
     var dataModel: [Collection] = []
     private let itemsPerRow: CGFloat = 2
     private let sectionInsets = UIEdgeInsets(
@@ -19,8 +19,8 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDataModel()
         setupCollectionView()
+        output.loadDataUserInVC()
         
         navigationItem.title = "Коллекции"
         navigationController?.navigationBar.prefersLargeTitles = false
@@ -36,18 +36,11 @@ class CollectionViewController: UIViewController {
     func setupCollectionView() {
 
         collectionVeiw.register(UINib(nibName:  CollectionCell.reuseId, bundle: nil), forCellWithReuseIdentifier:  CollectionCell.reuseId)
-        
         collectionVeiw.delegate = self
         collectionVeiw.dataSource = self
     }
     
-    private func loadDataModel(){
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "isMain == true")
-        let viewContext = dataManager.viewContext
-        guard let data = try? viewContext.fetch(fetchRequest) else { return }
-        self.dataModel = data.first!.collectionArray
-    }
+    
 }
 
 // MARK: - extension UICollectionViewDelegate, UICollectionViewDataSource
@@ -97,5 +90,13 @@ extension CollectionViewController: UICollectionViewDelegateFlowLayout {
                         minimumLineSpacingForSectionAt section: Int
     ) -> CGFloat {
       return sectionInsets.left
+    }
+}
+
+// MARK: - CollectionViewInput
+extension CollectionViewController: CollectionViewInput {
+    
+    func showCollections(_ user: User) {
+        self.dataModel = user.collectionArray
     }
 }

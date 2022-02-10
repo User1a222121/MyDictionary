@@ -70,6 +70,11 @@
             </constraints>
             <point key="canvasLocation" x="132" y="125"/>
         </view>
+        <customObject id="geu-IF-45L" customClass="RegistrationAssembly" customModule="MyDictionary" customModuleProvider="target">
+            <connections>
+                <outlet property="viewController" destination="-1" id="9nc-M9-BlK"/>
+            </connections>
+        </customObject>
     </objects>
     <resources>
         <systemColor name="systemGroupedBackgroundColor">

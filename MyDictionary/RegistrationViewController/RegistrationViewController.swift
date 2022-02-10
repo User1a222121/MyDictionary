@@ -3,8 +3,7 @@ import UIKit
 class RegistrationViewController: UIViewController {
     
     // MARK: - propirties
-    var output: RegistrationViewControllerOutput?
-    var dataManager = DataManager()
+    var output: RegistrationViewOutput!
     
     // MARK: - outlets
     @IBOutlet private weak var nameTF: CustomTextField!
@@ -29,7 +28,8 @@ class RegistrationViewController: UIViewController {
     }
     
     @objc func saveTapped() {
-        dataManager.createNewUser(name: nameTF.text ?? "Имя не указано", language: languageTF.text ?? "Родной язык не указан", city: cityTF.text  ?? "Город не указан", isMain: true)
+        
+        output.createNewUser(name: nameTF.text ?? "Имя не указано", language: languageTF.text ?? "Родной язык не указан", city: cityTF.text  ?? "Город не указан", isMain: true)
         output?.didFinish(self)
     }
 }
@@ -41,4 +41,8 @@ extension RegistrationViewController: UITextFieldDelegate {
             navigationItem.rightBarButtonItem?.isEnabled = true
         }
     }
+}
+
+extension RegistrationViewController: RegistrationViewInput {
+    
 }

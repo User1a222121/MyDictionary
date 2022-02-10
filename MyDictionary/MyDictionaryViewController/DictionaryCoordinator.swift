@@ -1,20 +1,15 @@
 import UIKit
 
 class DictionaryCoordinator: Coordinator {
-    private let presenter: UINavigationController
-//    private var mainMenuViewController: MainMenuViewController?
-//    private var dictionaryViewController: DictionaryViewController?
     
+    private let presenter: UINavigationController
     private lazy var tabBarController = UITabBarController()
     private lazy var navigationControllers = DictionaryCoordinator.makeNavigationControllers()
-    
-    private let dataManager: DataManager
 
-    init(presenter: UINavigationController, dataManager: DataManager) {
+    init(presenter: UINavigationController) {
 
     self.presenter = presenter
-    self.dataManager = dataManager
-  }
+    }
 
   func start() {
       

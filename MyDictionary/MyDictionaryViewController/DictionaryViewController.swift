@@ -4,9 +4,8 @@ import CoreData
 class DictionaryViewController: UIViewController {
     
     // MARK: - Propirties
-    var dataManager = DataManager()
     var dataModel: [Collection] = []
-    
+    var output: DictionaryViewOutput!
     
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -15,8 +14,8 @@ class DictionaryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadDataModel()
         setupTableView()
+        output.loadDataUserInVC()
         
         
         navigationItem.title = "Словарик"
@@ -38,17 +37,6 @@ class DictionaryViewController: UIViewController {
         tableView.dataSource = self
         tableView.rowHeight = 50
     }
-    
-    private func loadDataModel(){
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "isMain == true")
-        let viewContext = dataManager.viewContext
-        guard let data = try? viewContext.fetch(fetchRequest) else { return }
-        self.dataModel = data.first!.collectionArray
-    }
-    
-    
-    
     
     
     
@@ -85,9 +73,12 @@ extension DictionaryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
+}
+
+// MARK: - DictionaryViewInput
+extension DictionaryViewController: DictionaryViewInput {
     
-    
-    
-    
-    
+    func showCollections(_ user: User) {
+        self.dataModel = user.collectionArray
+    }
 }
