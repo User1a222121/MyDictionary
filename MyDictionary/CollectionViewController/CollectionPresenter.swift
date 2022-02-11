@@ -10,4 +10,9 @@ class CollectionPresenter: CollectionViewOutput {
         let dataUser = dataManager.obtainMainUserData()
         view.showCollections(dataUser)
     }
+    
+    func createNewCollection(collectionName: String) {
+        dataManager.createNewCollection(collectionName: collectionName)
+    }
+    
 }

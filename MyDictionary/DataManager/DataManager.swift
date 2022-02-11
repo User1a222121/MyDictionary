@@ -3,7 +3,9 @@ import CoreData
 protocol DataManagerProtocol {
     
     func obtainMainUserData() -> User
-    
+    func createNewWordInCollection(engWord: String, rusWord: String, collection: String) 
+    func deleteWord(engWord: String)
+    func createNewCollection(collectionName: String)
     
 }
 
@@ -45,12 +47,74 @@ class DataManager: DataManagerProtocol {
 
     // MARK: - Core Data create support
     
-    func createNewCollection() {
+    func createNewCollection(collectionName: String) {
+        
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "isMain == true")
+        
+        if let users = try? viewContext.fetch(fetchRequest) {
+            guard let user = users.first else { return }
+            user.addToCollection(Collection(nameCollection: "\(collectionName)", imageCollection: "noimage", word: [], context: viewContext))
+        }
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            fatalError("error createNewCollection \(error.localizedDescription)")
+        }
+        
         
     }
     
-    func createNewWord() {
+    func createNewWordInCollection(engWord: String, rusWord: String, collection: String) {
         
+        let fetchRequest: NSFetchRequest<Collection> = Collection.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "nameCollection == %@", collection)
+        
+        if let collections = try? viewContext.fetch(fetchRequest) {
+            guard let collection = collections.first else { return }
+            collection.addToWord(Word(rusWord: rusWord, engWord: engWord, context: viewContext))
+        }
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            fatalError("error createNewWordInCollection \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteWord(engWord: String) {
+        
+        let fetchRequest: NSFetchRequest<Word> = Word.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "engWord == %@", engWord)
+        
+        if let words = try? viewContext.fetch(fetchRequest) {
+            guard let word = words.first else { return }
+            viewContext.delete(word)
+        }
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            fatalError("error deleteWordInCollection \(error.localizedDescription)")
+        }
+    }
+    
+    func deleteCollection(collectionName: String) {
+        
+        let fetchRequest: NSFetchRequest<Collection> = Collection.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "nameCollection == %@", collectionName)
+        
+        if let collections = try? viewContext.fetch(fetchRequest) {
+            guard let collection = collections.first else { return }
+            viewContext.delete(collection)
+        }
+        
+        do {
+            try viewContext.save()
+        } catch let error as NSError {
+            fatalError("error deleteWordInCollection \(error.localizedDescription)")
+        }
     }
     
     func createNewUser(name: String, language: String, city: String, isMain: Bool) {
@@ -70,12 +134,15 @@ class DataManager: DataManagerProtocol {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "isMain == true")
         
+//        if let data = try? viewContext.fetch(fetchRequest), !data.isEmpty {
+//            return data.first!
+//        }
         do {
             let data = try viewContext.fetch(fetchRequest)
             if let mainUser = data.first {
                 return mainUser
             }
-                
+
         } catch let error as NSError {
             print("Error obtainDataCollection \(error.localizedDescription)")
         }

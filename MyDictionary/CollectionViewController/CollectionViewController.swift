@@ -19,6 +19,7 @@ class CollectionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         setupCollectionView()
         output.loadDataUserInVC()
         
@@ -30,6 +31,28 @@ class CollectionViewController: UIViewController {
     // MARK: - Func
     
     @objc func addNewCollection() {
+        
+        let alert = UIAlertController(title: "Создать коллекцию", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { textField in
+            textField.placeholder = "Название коллекции"
+        }
+        
+        let actionCreate = UIAlertAction(title: "Создать", style: .default) { alertCreate in
+            guard let collectionName = alert.textFields?[0].text else { return }
+            self.output.createNewCollection(collectionName: collectionName)
+            DispatchQueue.main.async {
+                self.output.loadDataUserInVC()
+                self.collectionVeiw.reloadData()
+            }
+            
+        }
+        let actionCancel = UIAlertAction(title: "Отмена", style: .cancel, handler: nil)
+
+        alert.addAction(actionCreate)
+        alert.addAction(actionCancel)
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
     
@@ -59,6 +82,10 @@ extension CollectionViewController: UICollectionViewDelegate, UICollectionViewDa
         }
         
         return UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
     }
     
 }

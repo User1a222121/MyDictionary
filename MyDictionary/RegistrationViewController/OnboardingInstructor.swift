@@ -6,7 +6,7 @@ protocol OnboardingProtocol {
     var needsToShowOnboarding: Bool { get }
 }
 
-class OnboardingInstructor: OnboardingProtocol {
+struct OnboardingInstructor: OnboardingProtocol {
     
     private static let StoreKey = "registrationPassed"
     
